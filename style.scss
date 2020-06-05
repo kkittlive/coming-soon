@@ -90,6 +90,10 @@ input.subscribe-submit {
     color: $second-clr;
     cursor: pointer;
   }
+
+  &:focus {
+    outline: none !important;
+  }
 }
 
 .subscribe-toggle {

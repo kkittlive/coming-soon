@@ -35,22 +35,37 @@
           <p>stay up-to-date on our development and launch,<br>
           and get access to special perks for early adopters</p>
 
-          <form name="signup-email" action="ilustracion.jpg"> <!-- method="post" action="signup-email.php" -->
+          <form name="signup-email"><!--  method="post" action="signup-email.php"> -->
 
             <div class="subscribe-toggle">
-              <input class="toggle toggle-left" id="toggle-on" name="toggle" value="false" type="radio" checked>
+              <input class="toggle toggle-left" id="toggle-on" name="toggle" value="artist" type="radio" checked>
               <label class="btn" for="toggle-on">artist</label>
-              <input class="toggle toggle-right" id="toggle-off" name="toggle" value="true" type="radio">
+              <input class="toggle toggle-right" id="toggle-off" name="toggle" value="investor" type="radio">
               <label class="btn" for="toggle-off">investor</label>
             </div>
 
             <div class="subscribe-email">
               <input class="subscribe-input" type="email" name="email" placeholder="your e-mail" onfocus="this.placeholder = ''" onblur="this.placeholder = 'your e-mail'" autocomplete="off"></br>
-              <input class="subscribe-submit" type="submit" value="submit">
+              <input class="subscribe-submit" type="button" value="submit">
             </div>
 
           </form>
         </div>
+
+    <script>
+      const submit = document.querySelector('.subscribe-submit');
+      const input = document.querySelector('.subscribe-input');
+      submit.addEventListener('click', (event) => {
+        if (input.value) {
+          submit.value = "thanks!";
+        }
+      })
+
+      // var frmvalidator = new Validator(“contactform”);
+      // frmvalidator.addValidation(“name”,”req”,”Please provide your name”);
+      // frmvalidator.addValidation(“email”,”req”,”Please provide your email”);
+      // frmvalidator.addValidation(“email”,”email”, “Please enter a valid email address”);
+    </script>
 
   </body>
 
